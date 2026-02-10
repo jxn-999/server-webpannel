@@ -1,0 +1,163 @@
+:root{
+    --color-1: #160f0f56;
+    --text-color: #f0f0f0;
+    --accent-color: #b4000069;
+    
+}
+*{
+    margin: 0;  
+    padding: 0;
+}
+html{
+    font-size: 12pt;
+    font-family: Poppins, 'Segoe UI', Tahoma, sans-serif;
+} 
+
+
+.bg-glow1 {
+    position: fixed;
+    top: 200px;
+    right: -600px;
+    width: 1400px;
+    height: 1400px;
+    background: radial-gradient(
+        circle,
+        rgba(220, 220, 220, 0.45) 0%,
+        rgba(220, 220, 220, 0.235) 30%,
+        rgba(220, 220, 220, 0.235) 50%,
+        transparent 70%
+    );
+    filter: blur(120px);
+    z-index: -1;
+}
+
+
+body{
+    background-image: url("../assets/loginbackground.png");
+    background-size: 200vh;
+    background-position: center;
+    background-color: rgb(32, 32, 32);
+} 
+
+.center-box {
+     width: 300px;
+    height: 300px;
+    padding: 30px 50px;
+    border-radius: 50px;
+
+    background-color: rgba(107, 107, 107, 0.088);
+    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 170px auto;
+    position: relative;
+   
+}
+
+h1{
+    margin-bottom: 20px;
+    color: #ee8c8c;
+    
+}
+
+.infotext{
+   margin-top: -10px;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   text-align: center;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+   align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+    animation: glow 1s infinite alternate;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+    animation: none;
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    animation: glow 1s infinite alternate;
+}
+
+.back-link:active {
+    transform: translateY(2px);
+    animation: none;
+}
+
+
+.infoinput {
+  width: 70%;
+  height: 0.5%;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  box-shadow: 0 0 0 1px #f8bfbfa4;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff5f53f;
+  transition: all .3s;
+  margin-top: 10px;
+}
+
+.infoinput::placeholder {
+  color: #ce9797;
+  font-size: 14px;
+  
+}
+
+.infoinput:focus {
+  outline: none;
+  box-shadow: 0 0 10px 1px #ee8c8c;
+  border: none;
+  transition: all .3s;
+}
+
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px var(--accent-color);
+    }
+    to {
+        text-shadow: 0 0 15px var(--accent-color);
+    }
+}
