@@ -1,0 +1,432 @@
+:root{
+    --color-1: #160f0f56;
+    --text-color: #f0f0f0;
+    --accent-color: #b4000069;
+    
+}
+*{
+    margin: 0;  
+    padding: 0;
+}
+html{
+    font-size: 12pt;
+    font-family: Poppins, 'Segoe UI', Tahoma, sans-serif;
+} 
+
+
+
+
+
+
+
+.bg-glow1 {
+    position: fixed;
+    top: 200px;
+    right: -600px;
+    width: 1600px;
+    height: 1600px;
+    background: radial-gradient(
+        circle,
+        rgba(220, 38, 38, 0.45) 0%,
+        rgba(220, 38, 38, 0.235) 30%,
+        rgba(220, 38, 38, 0.1) 50%,
+        transparent 70%
+    );
+    filter: blur(120px);
+    z-index: -1;
+}
+
+
+
+.bg-glow2 {
+    position: fixed;
+    top: 30px;
+    right: 400px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+        circle,
+        rgba(220, 38, 38, 0.45) 0%,
+        rgba(220, 38, 38, 0.235) 40%,
+        rgba(220, 38, 38, 0.1) 90%,
+        transparent 70%
+    );
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.bg-glow3 {
+    position: fixed;
+    top: 450px;
+    right: 600px;
+    width: 1000px;
+    height: 400px;
+    background: radial-gradient(
+        circle,
+        rgba(220, 38, 38, 0.45) 0%,
+        rgba(220, 38, 38, 0.235) 40%,
+        rgba(220, 38, 38, 0.1) 90%,
+        transparent 70%
+    );
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.bg-glow4 {
+    position: fixed;
+    top: -600px;
+    right: 1400px;
+    width: 1500px;
+    height: 2000px;
+    background: radial-gradient(
+        circle,
+        rgba(220, 38, 38, 0.45) 0%,
+        rgba(220, 38, 38, 0.235) 40%,
+        rgba(220, 38, 38, 0.1) 50%,
+        transparent 70%
+    );
+    filter: blur(120px);
+    z-index: -1;
+}
+
+
+nav{
+    height: 90px;
+    background-color: var(--color-1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-end;
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);  
+}
+
+nav a:hover{
+    background-color: var(--accent-color);
+}
+nav .home-link{
+    margin-right: auto  ;
+}
+
+nav svg{
+    fill: var(--text-color);   
+}
+
+#sidebar-active{
+display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+    padding: 0 20px;
+    display: none;
+}
+
+body{
+    background-color: black;
+    background-image: linear-gradient(90deg, black, rgb(0, 0, 0), black, black, black);
+    color: var(--text-color);
+    
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vw;
+    margin-left: -45vw;
+
+    
+}
+
+#welcome{
+margin-bottom: 0px;
+margin-left: 45px;
+}
+
+main{
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 90px);
+}
+
+.logininfo{
+    width: 620px;
+    height: 300px;
+    padding: 20px 50px;
+    border-radius: 50px;
+
+    background-color: rgba(128, 0, 0, 0.088);
+    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0;
+    position: relative
+    
+}
+
+.info-section{
+    margin-top: 0vh;
+}
+
+#namedisplay{
+    font-size: 4vh;
+    margin-top: 4vh;
+}
+
+.info-grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 0px;
+    column-gap: 14px;
+}
+
+.info-label{
+    font-weight: 600;
+    opacity: 0.65;
+    text-align: left;
+    
+}
+
+.info-value{
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.home-buttons{
+margin-top: 5vh;
+grid-template-columns: auto 1fr;
+display: flex;
+gap: 1vh;
+}
+
+.top-hilfe{
+    position: absolute;
+    top: 4vh;
+    right: 7vh;
+}
+
+
+.home-buttons{
+    gap: 5vh;
+    margin-top: 5vh;
+}
+
+/* Hilfe Button */
+/* From Uiverse.io by vinodjangid07 */ 
+.hilfe {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 85px;
+  height: 40px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(20, 20, 20);
+  transition-duration: .3s;
+}
+
+.svg-button {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.hilfe:hover {
+  color: transparent;
+}
+
+.hilfe:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.hilfe:active {
+  transform: translate(3px , 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(73, 1, 1);
+}
+/* ----------------------------------------------------- */
+
+/* Server Erstellen Button */ 
+.create-server-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 155px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(20, 20, 20);
+  transition-duration: .3s;
+}
+
+.svg-button {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.create-server-button:hover {
+  color: transparent;
+}
+
+.create-server-button:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.create-server-button:active {
+  transform: translate(3px , 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(73, 1, 1);
+}
+/* ----------------------------------------------------- */ 
+
+
+/* Manage Servers button */ 
+.manage-servers {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 175px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(20, 20, 20);
+  transition-duration: .3s;
+}
+
+.svg-button {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.manage-servers:hover {
+  color: transparent;
+}
+
+.manage-servers:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.manage-servers:active {
+  transform: translate(3px , 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(73, 1, 1);
+}
+/* ----------------------------------------------------- */
+
+@media(max-width: 650px){
+    body{
+        background-image: linear-gradient(90deg,rgb(19, 18, 18), rgb(29, 29, 29));
+    }
+
+    .layout{
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+
+        background-color: rgba(0, 0, 0, 0.829); 
+        backdrop-filter: blur(10px);
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: right 0.25s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+    display: block;
+    padding: 20px;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    nav{
+        height: 60px;
+    }
+
+}
+
+
+
+
